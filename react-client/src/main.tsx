@@ -3,8 +3,11 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import { Provider } from "react-redux";
 import { store } from "./redux/store.ts";
+import { setupListeners } from "@reduxjs/toolkit/query";
 
 import "./index.css";
+
+setupListeners(store.dispatch);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

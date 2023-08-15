@@ -89,7 +89,6 @@ const navItems = [
   },
 ];
 import FlexBetween from "../../../global/FlexBetween";
-import { ProfileImageDummy } from "../../../assets";
 import { SidebarProps } from "../../../@types/sidebar.types";
 
 const Sidebar: React.FC<SidebarProps> = ({

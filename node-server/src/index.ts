@@ -11,6 +11,8 @@ import {
   managementRoutes,
   salesRoutes,
 } from "./api/routes";
+// import { dataUser } from "./assets/mockdata";
+// import UserModel from "./models/user.model";
 
 // constants
 const app = express();
@@ -43,4 +45,6 @@ app.get("/", (req: Request, res: Response) => {
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
+
+  // UserModel.insertMany(dataUser);        <--- injecting all the mockdata into the database (run only once)
 });
