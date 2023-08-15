@@ -5,6 +5,12 @@ import cors from "cors";
 import morgan from "morgan";
 import bodyParser from "body-parser";
 import { connectToDatabase } from "./config/db";
+import {
+  clientRoutes,
+  generalRoutes,
+  managementRoutes,
+  salesRoutes,
+} from "./api/routes";
 
 // constants
 const app = express();
@@ -26,12 +32,12 @@ app.use(cors());
 connectToDatabase();
 
 // ROUTES
-// app.use("/client", clientRoutes);
-// app.use("/general", generalRoutes);
-// app.use("/management", managementRoutes);
-// app.use("/sales", salesRoutes);
+app.use("/client", clientRoutes);
+app.use("/general", generalRoutes);
+app.use("/management", managementRoutes);
+app.use("/sales", salesRoutes);
 app.get("/", (req: Request, res: Response) => {
-  res.send("Hello, Express in TypeScript!");
+  res.send("Server is Running");
 });
 
 // Start the server
