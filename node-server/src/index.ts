@@ -11,7 +11,9 @@ import {
   managementRoutes,
   salesRoutes,
 } from "./api/routes";
-// import { dataUser } from "./assets/mockdata";
+// import { dataUser, dataProduct, dataProductStat } from "./assets/mockdata";
+// import ProductModel from "./models/products.model";
+// import ProductStatModel from "./models/productStats.model";
 // import UserModel from "./models/user.model";
 
 // constants
@@ -43,8 +45,12 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 // Start the server
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 
-  // UserModel.insertMany(dataUser);        <--- injecting all the mockdata into the database (run only once)
+  // ****** RUN ONLY ONCE (Injecting the data) ******
+  // UserModel.insertMany(dataUser);
+  // ProductModel.insertMany(dataProduct);
+  // ProductStatModel.insertMany(dataProductStat);
 });
