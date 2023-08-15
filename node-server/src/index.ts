@@ -6,8 +6,8 @@ import morgan from "morgan";
 import bodyParser from "body-parser";
 import { connectToDatabase } from "./config/db";
 import {
+  authRoutes,
   clientRoutes,
-  generalRoutes,
   managementRoutes,
   salesRoutes,
 } from "./api/routes";
@@ -33,7 +33,7 @@ connectToDatabase();
 
 // ROUTES
 app.use("/client", clientRoutes);
-app.use("/general", generalRoutes);
+app.use("/auth", authRoutes);
 app.use("/management", managementRoutes);
 app.use("/sales", salesRoutes);
 app.get("/", (req: Request, res: Response) => {
