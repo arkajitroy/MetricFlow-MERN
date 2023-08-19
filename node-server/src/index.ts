@@ -11,10 +11,6 @@ import {
   managementRoutes,
   salesRoutes,
 } from "./api/routes";
-// import { dataUser, dataProduct, dataProductStat } from "./assets/mockdata";
-// import ProductModel from "./models/products.model";
-// import ProductStatModel from "./models/productStats.model";
-// import UserModel from "./models/user.model";
 
 // constants
 const app = express();
@@ -49,8 +45,10 @@ app.get("/", (req: Request, res: Response) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 
-  // ****** RUN ONLY ONCE (Injecting the data) ******
+  // ****** RUN ONLY ONCE (Injecting the data) [uncomment -> import -> run | do for each lines] ******
   // UserModel.insertMany(dataUser);
   // ProductModel.insertMany(dataProduct);
   // ProductStatModel.insertMany(dataProductStat);
+  // TransactionModel.insertMany(dataTransaction);
+  // OverallStatModel.insertMany(dataOverallStat);
 });
