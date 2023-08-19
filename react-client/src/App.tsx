@@ -10,6 +10,9 @@ import {
   Customers,
   Transactions,
   Overview,
+  Daily,
+  Monthly,
+  Breakdown,
 } from "./components";
 
 const App = () => {
@@ -28,6 +31,9 @@ const App = () => {
               <Route path="/customers" element={<Customers />} />
               <Route path="/transactions" element={<Transactions />} />
               <Route path="/overview" element={<Overview />} />
+              <Route path="/daily" element={<Daily />} />
+              <Route path="/monthly" element={<Monthly />} />
+              <Route path="/breakdown" element={<Breakdown />} />
             </Route>
           </Routes>
         </ThemeProvider>
