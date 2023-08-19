@@ -3,8 +3,9 @@ import { useGetProductsQuery } from "../../../redux/api";
 
 import { ProductProps } from "../../../@types/product.types";
 import { Header, Product } from "../..";
+import React from "react";
 
-const Products = () => {
+const Products: React.FC<{}> = () => {
   const { data, isLoading } = useGetProductsQuery();
   const isNonMobile = useMediaQuery("(min-width: 1000px)");
   console.log("data", data);
