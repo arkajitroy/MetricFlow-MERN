@@ -51,4 +51,5 @@ app.listen(PORT, () => {
   // ProductStatModel.insertMany(dataProductStat);
   // TransactionModel.insertMany(dataTransaction);
   // OverallStatModel.insertMany(dataOverallStat);
+  // AffiliateStatModel.insertMany(dataAffiliateStat);
 });

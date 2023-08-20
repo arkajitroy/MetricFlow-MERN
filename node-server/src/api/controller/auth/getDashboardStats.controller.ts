@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import TransactionModel from "../../../models/transaction.model";
 import OverallStatModel from "../../../models/overallStats.model";
 
-export const getDashboardStats = async (res: Response, req: Request) => {
+export const getDashboardStats = async (req: Request, res: Response) => {
   try {
     // hardcoded values
     const currentMonth = "November";
